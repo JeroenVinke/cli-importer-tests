@@ -1,0 +1,46 @@
+<template>
+
+	<h1>${message}</h1>
+
+	<h3>Lodash</h3>
+	${lodashMsg}
+
+	<h3>toastr</h3>
+	<require from="toastr/build/toastr.min.css"></require>
+	<button click.delegate="toastr()">Show toastr</button>
+
+	<h3>humane-js</h3>
+	<require from="humane-js/themes/boldlight.css"></require>
+	<button click.delegate="humane()">Show humane</button>
+
+	<h3>d3</h3>
+	<require from="./app.css"></require>
+	<div class="chart"></div>
+
+	<h3>flatpickr</h3>
+  <require from="flatpickr/dist/flatpickr.css"></require>
+  <input class="flatpickr" ref="target" type="text" placeholder="Select Date..">
+
+	<h3>jQuery</h3>
+	<button click.delegate="jquery()">Toggle visibility</button>
+	<div ref="red" style="width: 25px; height: 25px; background-color: red;"></div>
+
+	<h3>Sweetalert</h3>
+  <require from="sweetalert/dist/sweetalert.css"></require>
+	<button click.delegate="sweetalert()">Show sweetalert</button>
+
+	<h3>Material design</h3>
+	<require from="material-design-lite/dist/material.deep_orange-blue.min.css"></require>
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+		Button
+	</button>
+
+	<h3>dragula (does not work)</h3>
+	<div ref="dragula_target" style="width: 25px; height: 25px; background-color: red;"></div>
+
+	<h3>interactjs</h3>
+	<div class="interactjs_draggable" style="position: relative;; width: 25px; height: 25px; background-color: red;"></div>
+
+	<h3>ckeditor (does not work)</h3>
+	<textarea ref="ckeditor_target"></textarea>
+</template>

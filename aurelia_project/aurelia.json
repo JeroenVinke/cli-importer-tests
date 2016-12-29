@@ -1,0 +1,217 @@
+{
+  "name": "aurelia-app",
+  "type": "project:application",
+  "packageManager": "npm",
+  "platform": {
+    "id": "web",
+    "displayName": "Web",
+    "output": "scripts",
+    "index": "index.html"
+  },
+  "transpiler": {
+    "id": "babel",
+    "displayName": "Babel",
+    "fileExtension": ".js",
+    "options": {
+      "plugins": [
+        "transform-es2015-modules-amd"
+      ]
+    },
+    "source": "src/**/*.js"
+  },
+  "markupProcessor": {
+    "id": "none",
+    "displayName": "None",
+    "fileExtension": ".html",
+    "source": "src/**/*.html"
+  },
+  "cssProcessor": {
+    "id": "none",
+    "displayName": "None",
+    "fileExtension": ".css",
+    "source": "src/**/*.css"
+  },
+  "editor": {
+    "id": "vscode",
+    "displayName": "Visual Studio Code"
+  },
+  "unitTestRunner": {
+    "id": "karma",
+    "displayName": "Karma",
+    "source": "test/unit/**/*.js"
+  },
+  "paths": {
+    "root": "src",
+    "resources": "src/resources",
+    "elements": "src/resources/elements",
+    "attributes": "src/resources/attributes",
+    "valueConverters": "src/resources/value-converters",
+    "bindingBehaviors": "src/resources/binding-behaviors"
+  },
+  "testFramework": {
+    "id": "jasmine",
+    "displayName": "Jasmine"
+  },
+  "build": {
+    "targets": [
+      {
+        "id": "web",
+        "displayName": "Web",
+        "output": "scripts",
+        "index": "index.html"
+      }
+    ],
+    "loader": {
+      "type": "require",
+      "configTarget": "vendor-bundle.js",
+      "includeBundleMetadataInConfig": "auto",
+      "plugins": [
+        {
+          "name": "text",
+          "extensions": [
+            ".html",
+            ".css"
+          ],
+          "stub": true
+        }
+      ]
+    },
+    "options": {
+      "minify": "stage & prod",
+      "sourcemaps": "dev & stage"
+    },
+    "bundles": [
+      {
+        "name": "app-bundle.js",
+        "source": [
+          "[**/*.js]",
+          "**/*.{css,html}"
+        ]
+      },
+      {
+        "name": "vendor-bundle.js",
+        "prepend": [
+          "node_modules/bluebird/js/browser/bluebird.core.js",
+          "node_modules/requirejs/require.js"
+        ],
+        "dependencies": [
+          {
+            "name": "aurelia-binding",
+            "path": "../node_modules/aurelia-binding/dist/amd",
+            "main": "aurelia-binding"
+          },
+          "aurelia-bootstrapper",
+          {
+            "name": "aurelia-dependency-injection",
+            "path": "../node_modules/aurelia-dependency-injection/dist/amd",
+            "resources": [],
+            "main": "aurelia-dependency-injection"
+          },
+          "aurelia-event-aggregator",
+          "aurelia-framework",
+          "aurelia-history",
+          "aurelia-history-browser",
+          "aurelia-loader",
+          "aurelia-loader-default",
+          "aurelia-logging",
+          "aurelia-logging-console",
+          "aurelia-metadata",
+          "aurelia-pal",
+          "aurelia-pal-browser",
+          "aurelia-path",
+          "aurelia-polyfills",
+          "aurelia-route-recognizer",
+          "aurelia-router",
+          "aurelia-task-queue",
+          "aurelia-templating",
+          "aurelia-templating-binding",
+          "text",
+          {
+            "name": "aurelia-templating-resources",
+            "path": "../node_modules/aurelia-templating-resources/dist/amd",
+            "main": "aurelia-templating-resources"
+          },
+          {
+            "name": "aurelia-templating-router",
+            "path": "../node_modules/aurelia-templating-router/dist/amd",
+            "main": "aurelia-templating-router"
+          },
+          {
+            "name": "aurelia-testing",
+            "path": "../node_modules/aurelia-testing/dist/amd",
+            "main": "aurelia-testing",
+            "env": "dev"
+          },
+          {
+            "name": "flatpickr",
+            "path": "../node_modules/flatpickr",
+            "resources": [
+              "dist/flatpickr.css"
+            ],
+            "main": "dist/flatpickr.js"
+          },
+          {
+            "name": "sweetalert",
+            "path": "../node_modules/sweetalert",
+            "main": "lib/sweetalert",
+            "resources": [
+              "dist/sweetalert.css"
+            ]
+          },
+          "jquery",
+          {
+            "name": "d3",
+            "path": "../node_modules/d3",
+            "resources": [],
+            "main": "build/d3"
+          },
+          {
+            "name": "lodash",
+            "path": "../node_modules/lodash",
+            "resources": [],
+            "main": "lodash.js"
+          },
+          {
+            "name": "toastr",
+            "path": "../node_modules/toastr",
+            "main": "toastr",
+            "resources": [
+              "build/toastr.min.css"
+            ],
+            "deps": [
+              "jquery"
+            ]
+          },
+          {
+            "name": "humane-js",
+            "path": "../node_modules/humane-js",
+            "resources": [
+              "themes/boldlight.css"
+            ],
+            "main": "humane.js"
+          },
+          {
+            "name": "material-design-lite",
+            "path": "../node_modules/material-design-lite",
+            "resources": [
+              "dist/material.deep_orange-blue.min.css"
+            ],
+            "main": "dist/material.min.js"
+          },
+          {
+            "name": "interact",
+            "path": "../node_modules/interact.js",
+            "resources": [],
+            "main": "interact.js"
+          },
+          {
+            "name": "ckeditor",
+            "path": "../node_modules/ckeditor",
+            "resources": [],
+            "main": "ckeditor.js"
+          }
+        ]
+      }
+    ]
+  }
+}

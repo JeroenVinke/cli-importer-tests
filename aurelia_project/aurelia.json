@@ -153,12 +153,17 @@
           {
             "name": "sweetalert",
             "path": "../node_modules/sweetalert",
-            "main": "lib/sweetalert",
             "resources": [
               "dist/sweetalert.css"
-            ]
+            ],
+            "main": "lib/sweetalert.js"
           },
-          "jquery",
+          {
+            "name": "jquery",
+            "path": "../node_modules/jquery",
+            "resources": [],
+            "main": "dist/jquery.js"
+          },
           {
             "name": "d3",
             "path": "../node_modules/d3",
@@ -174,19 +179,16 @@
           {
             "name": "toastr",
             "path": "../node_modules/toastr",
-            "main": "toastr",
             "resources": [
-              "build/toastr.min.css"
+              "build/toastr.css"
             ],
-            "deps": [
-              "jquery"
-            ]
+            "main": "toastr.js"
           },
           {
             "name": "humane-js",
             "path": "../node_modules/humane-js",
             "resources": [
-              "themes/boldlight.css"
+              "themes/original.css"
             ],
             "main": "humane.js"
           },

@@ -7,8 +7,7 @@ import toastr from 'toastr';
 // import * as dragula from 'dragula';
 import interact from 'interact';
 import 'ckeditor';
-import _humane  from 'humane-js';
-const humane = (_humane.default ? _humane.default : _humane);
+import humane  from 'humane-js';
 
 export class App {
   constructor() {

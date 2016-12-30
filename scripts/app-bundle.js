@@ -51,8 +51,6 @@ define('app',['exports', 'flatpickr', 'sweetalert', 'd3', 'lodash', 'jquery', 't
     }
   }
 
-  var _humane2 = _humaneJs2.default.default ? _humaneJs2.default.default : _humaneJs2.default;
-
   var App = exports.App = function () {
     function App() {
       _classCallCheck(this, App);
@@ -94,7 +92,7 @@ define('app',['exports', 'flatpickr', 'sweetalert', 'd3', 'lodash', 'jquery', 't
     };
 
     App.prototype.humane = function humane() {
-      _humane2.log('Welcome Back');
+      _humaneJs2.default.log('Welcome Back');
     };
 
     App.prototype.toastr = function toastr() {
@@ -1156,5 +1154,5 @@ module.exports = exports['default'];
 });
 
 define('text!app.css', ['module'], function(module) { module.exports = ".chart div {\r\n  font: 10px sans-serif;\r\n  background-color: steelblue;\r\n  text-align: right;\r\n  padding: 3px;\r\n  margin: 1px;\r\n  color: white;\r\n}\r\n"; });
-define('text!app.html', ['module'], function(module) { module.exports = "<template>\n\n\t<h1>${message}</h1>\n\n\t<h3>Lodash</h3>\n\t${lodashMsg}\n\n\t<h3>toastr</h3>\n\t<require from=\"toastr/build/toastr.min.css\"></require>\n\t<button click.delegate=\"toastr()\">Show toastr</button>\n\n\t<h3>humane-js</h3>\n\t<require from=\"humane-js/themes/boldlight.css\"></require>\n\t<button click.delegate=\"humane()\">Show humane</button>\n\n\t<h3>d3</h3>\n\t<require from=\"./app.css\"></require>\n\t<div class=\"chart\"></div>\n\n\t<h3>flatpickr</h3>\n  <require from=\"flatpickr/dist/flatpickr.css\"></require>\n  <input class=\"flatpickr\" ref=\"target\" type=\"text\" placeholder=\"Select Date..\">\n\n\t<h3>jQuery</h3>\n\t<button click.delegate=\"jquery()\">Toggle visibility</button>\n\t<div ref=\"red\" style=\"width: 25px; height: 25px; background-color: red;\"></div>\n\n\t<h3>Sweetalert</h3>\n  <require from=\"sweetalert/dist/sweetalert.css\"></require>\n\t<button click.delegate=\"sweetalert()\">Show sweetalert</button>\n\n\t<h3>Material design</h3>\n\t<require from=\"material-design-lite/dist/material.deep_orange-blue.min.css\"></require>\n\t<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\">\n\t\tButton\n\t</button>\n\n\t<h3>dragula (does not work)</h3>\n\t<div ref=\"dragula_target\" style=\"width: 25px; height: 25px; background-color: red;\"></div>\n\n\t<h3>interactjs</h3>\n\t<div class=\"interactjs_draggable\" style=\"position: relative;; width: 25px; height: 25px; background-color: red;\"></div>\n\n\t<h3>ckeditor (does not work)</h3>\n\t<textarea ref=\"ckeditor_target\"></textarea>\n</template>\n"; });
+define('text!app.html', ['module'], function(module) { module.exports = "<template>\n\n\t<h1>${message}</h1>\n\n\t<h3>Lodash</h3>\n\t${lodashMsg}\n\n\t<h3>toastr</h3>\n\t<require from=\"toastr/build/toastr.css\"></require>\n\t<button click.delegate=\"toastr()\">Show toastr</button>\n\n\t<h3>humane-js</h3>\n\t<require from=\"humane-js/themes/original.css\"></require>\n\t<button click.delegate=\"humane()\">Show humane</button>\n\n\t<h3>d3</h3>\n\t<require from=\"./app.css\"></require>\n\t<div class=\"chart\"></div>\n\n\t<h3>flatpickr</h3>\n\t<require from=\"flatpickr/dist/flatpickr.css\"></require>\n\t<input class=\"flatpickr\" ref=\"target\" type=\"text\" placeholder=\"Select Date..\">\n\n\t<h3>jQuery</h3>\n\t<button click.delegate=\"jquery()\">Toggle visibility</button>\n\t<div ref=\"red\" style=\"width: 25px; height: 25px; background-color: red;\"></div>\n\n\t<h3>Sweetalert</h3>\n  \t<require from=\"sweetalert/dist/sweetalert.css\"></require>\n\t<button click.delegate=\"sweetalert()\">Show sweetalert</button>\n\n\t<h3>Material design</h3>\n\t<require from=\"material-design-lite/dist/material.deep_orange-blue.min.css\"></require>\n\t<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\">\n\t\tButton\n\t</button>\n\n\t<h3>dragula (does not work)</h3>\n\t<div ref=\"dragula_target\" style=\"width: 25px; height: 25px; background-color: red;\"></div>\n\n\t<h3>interactjs</h3>\n\t<div class=\"interactjs_draggable\" style=\"position: relative;; width: 25px; height: 25px; background-color: red;\"></div>\n\n\t<h3>ckeditor (does not work)</h3>\n\t<textarea ref=\"ckeditor_target\"></textarea>\n</template>\n"; });
 //# sourceMappingURL=app-bundle.js.map
